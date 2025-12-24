@@ -23,13 +23,17 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10),
-        ];
+       return [
+    'name' => $this->faker->words(3, true),
+    'slug' => $this->faker->slug(), // Slug එක හැදෙන විදිය
+    'average_rating' => $this->faker->randomFloat(2, 0, 5), // 0-5 අතර අගයක්
+    'description' => $this->faker->sentence(10),
+    'price' => $this->faker->numberBetween(1000, 50000),
+    'image' => 'products/dummy.jpg',
+    'category_id' => 1,
+    'stock_quantity' => 100,
+    'is_active' => 1,
+];
     }
 
     /**
