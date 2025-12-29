@@ -1,320 +1,158 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - Calista')
+@section('title', 'Contact Us - Calista Luxury Furniture')
 
 @section('content')
-<!-- Breadcrumb -->
-<div class="py-4 bg-gray-100">
-    <div class="container px-4 mx-auto">
-        <nav class="flex" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                <li class="inline-flex items-center">
-                    <a href="/" class="text-gray-700 hover:text-yellow-600">
-                        <i class="mr-2 fas fa-home"></i>Home
-                    </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <i class="mx-2 text-gray-400 fas fa-chevron-right"></i>
-                        <span class="text-gray-500">Contact Us</span>
-                    </div>
-                </li>
-            </ol>
-        </nav>
+
+<div class="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+             class="w-full h-full object-cover opacity-40"
+             alt="Contact Support">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4">
+        <span class="text-yellow-500 font-bold tracking-[0.2em] uppercase text-sm mb-4 block animate-fade-in-down">24/7 Support</span>
+        <h1 class="text-5xl md:text-6xl font-serif font-bold text-white mb-4 animate-fade-in-up">
+            Get in <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-600">Touch</span>
+        </h1>
+        <p class="text-gray-300 text-lg font-light max-w-2xl mx-auto animate-fade-in-up delay-100">
+            Connect with us on your favorite platform.
+        </p>
     </div>
 </div>
 
-<!-- Contact Section -->
+<div class="relative bg-gray-900 overflow-hidden py-4 shadow-lg z-20 border-b border-gray-800">
+    <div class="absolute inset-0 bg-gray-900"></div>
+
+    <div class="flex overflow-x-hidden group">
+        <div class="py-1 animate-marquee whitespace-nowrap flex gap-16 text-white font-bold tracking-wider text-sm uppercase items-center">
+
+            <a href="https://facebook.com" target="_blank" class="flex items-center gap-3 hover:text-blue-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-facebook-f"></i></span>
+                Facebook
+            </a>
+
+            <a href="https://wa.me/94771234567" target="_blank" class="flex items-center gap-3 hover:text-green-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-whatsapp"></i></span>
+                WhatsApp
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="flex items-center gap-3 hover:text-pink-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-instagram"></i></span>
+                Instagram
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-3 hover:text-blue-400 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-linkedin-in"></i></span>
+                LinkedIn
+            </a>
+
+            <a href="https://m.me/calista" target="_blank" class="flex items-center gap-3 hover:text-blue-600 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-facebook-messenger"></i></span>
+                Messenger
+            </a>
+
+            <a href="https://twitter.com" target="_blank" class="flex items-center gap-3 hover:text-sky-400 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-twitter"></i></span>
+                Twitter
+            </a>
+
+            <span class="text-gray-600">|</span> <a href="https://facebook.com" target="_blank" class="flex items-center gap-3 hover:text-blue-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-facebook-f"></i></span>
+                Facebook
+            </a>
+
+            <a href="https://wa.me/94771234567" target="_blank" class="flex items-center gap-3 hover:text-green-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-whatsapp"></i></span>
+                WhatsApp
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="flex items-center gap-3 hover:text-pink-500 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-instagram"></i></span>
+                Instagram
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="flex items-center gap-3 hover:text-blue-400 transition-colors duration-300">
+                <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20"><i class="fab fa-linkedin-in"></i></span>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</div>
+
 <section class="py-16 bg-white">
-    <div class="container px-4 mx-auto">
-        <div class="mb-12 text-center">
-            <h1 class="mb-4 text-4xl font-bold">Get in Touch</h1>
-            <p class="max-w-2xl mx-auto text-gray-600">Have a question or need assistance? We're here to help! Send us a message and we'll respond as soon as possible.</p>
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-b-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-phone-alt"></i></div>
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Call Us</h3>
+                <p class="text-gray-500 text-sm">+94 11 234 5678</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-b-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-envelope"></i></div>
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Email Us</h3>
+                <p class="text-gray-500 text-sm">info@calista.lk</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-b-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-map-marker-alt"></i></div>
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Visit Us</h3>
+                <p class="text-gray-500 text-sm">Colombo 03, LK</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-b-4 border-yellow-500 hover:-translate-y-2 transition duration-300">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-clock"></i></div>
+                <h3 class="font-bold text-gray-900 text-lg mb-2">Hours</h3>
+                <p class="text-gray-500 text-sm">9am - 6pm</p>
+            </div>
         </div>
+    </div>
+</section>
 
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <!-- Contact Information -->
-            <div class="lg:col-span-1">
-                <div class="h-full p-8 rounded-lg bg-yellow-50">
-                    <h2 class="mb-6 text-2xl font-bold">Contact Information</h2>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-yellow-600 rounded-full">
-                                <i class="text-white fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="mb-1 font-semibold text-gray-900">Address</h3>
-                                <p class="text-gray-600">123 Furniture Street<br>Colombo, Sri Lanka</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-yellow-600 rounded-full">
-                                <i class="text-white fas fa-phone"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="mb-1 font-semibold text-gray-900">Phone</h3>
-                                <p class="text-gray-600">+94 11 234 5678<br>+94 77 123 4567</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-yellow-600 rounded-full">
-                                <i class="text-white fas fa-envelope"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="mb-1 font-semibold text-gray-900">Email</h3>
-                                <p class="text-gray-600">info@calista.lk<br>support@calista.lk</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-yellow-600 rounded-full">
-                                <i class="text-white fas fa-clock"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="mb-1 font-semibold text-gray-900">Business Hours</h3>
-                                <p class="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM<br>Sun: Closed</p>
-                            </div>
-                        </div>
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div class="lg:w-1/2 p-10 lg:p-16">
+                <span class="text-yellow-600 font-bold tracking-widest text-sm uppercase">Send a Message</span>
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mt-2 mb-6">How can we help?</h2>
+                <form action="#" method="POST" class="space-y-6">
+                    @csrf
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div><label class="block text-sm font-bold text-gray-700 mb-2">Your Name</label><input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-yellow-500"></div>
+                        <div><label class="block text-sm font-bold text-gray-700 mb-2">Phone</label><input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-yellow-500"></div>
                     </div>
-
-                    <!-- Social Media -->
-                    <div class="mt-8">
-                        <h3 class="mb-4 font-semibold text-gray-900">Follow Us</h3>
-                        <div class="flex space-x-3">
-                            <a href="#" class="flex items-center justify-center w-10 h-10 text-white transition bg-yellow-600 rounded-full hover:bg-yellow-700">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="flex items-center justify-center w-10 h-10 text-white transition bg-yellow-600 rounded-full hover:bg-yellow-700">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="flex items-center justify-center w-10 h-10 text-white transition bg-yellow-600 rounded-full hover:bg-yellow-700">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="flex items-center justify-center w-10 h-10 text-white transition bg-yellow-600 rounded-full hover:bg-yellow-700">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <div><label class="block text-sm font-bold text-gray-700 mb-2">Email</label><input type="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-yellow-500"></div>
+                    <div><label class="block text-sm font-bold text-gray-700 mb-2">Message</label><textarea rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-yellow-500"></textarea></div>
+                    <button type="submit" class="w-full py-4 bg-gray-900 text-white font-bold rounded-lg hover:bg-yellow-600 transition shadow-lg">Send Message</button>
+                </form>
             </div>
-
-            <!-- Contact Form -->
-            <div class="lg:col-span-2">
-                <div class="p-8 bg-white border border-gray-200 rounded-lg">
-                    <h2 class="mb-6 text-2xl font-bold">Send us a Message</h2>
-
-                    @if(session('success'))
-                        <div class="px-4 py-3 mb-6 text-green-700 bg-green-100 border border-green-400 rounded" role="alert">
-                            <div class="flex items-center">
-                                <i class="mr-2 fas fa-check-circle"></i>
-                                <span>{{ session('success') }}</span>
-                            </div>
-                        </div>
-                    @endif
-
-                    @if($errors->any())
-                        <div class="px-4 py-3 mb-6 text-red-700 bg-red-100 border border-red-400 rounded" role="alert">
-                            <div class="flex items-center mb-2">
-                                <i class="mr-2 fas fa-exclamation-circle"></i>
-                                <span class="font-semibold">Please fix the following errors:</span>
-                            </div>
-                            <ul class="list-disc list-inside">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                    <form action="{{ route('contact.submit') }}" method="POST">
-                        @csrf
-
-                        <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
-                            <div>
-                                <label for="name" class="block mb-2 font-semibold text-gray-700">
-                                    Full Name <span class="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value="{{ old('name') }}"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-600 @error('name') border-red-500 @enderror"
-                                    placeholder="Enter your name"
-                                    required
-                                >
-                                @error('name')
-                                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                                @enderror
-                            </div>
-
-                            <div>
-                                <label for="email" class="block mb-2 font-semibold text-gray-700">
-                                    Email Address <span class="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value="{{ old('email') }}"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-600 @error('email') border-red-500 @enderror"
-                                    placeholder="Enter your email"
-                                    required
-                                >
-                                @error('email')
-                                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
-                            <div>
-                                <label for="phone" class="block mb-2 font-semibold text-gray-700">
-                                    Phone Number
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value="{{ old('phone') }}"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-600 @error('phone') border-red-500 @enderror"
-                                    placeholder="Enter your phone"
-                                >
-                                @error('phone')
-                                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                                @enderror
-                            </div>
-
-                            <div>
-                                <label for="subject" class="block mb-2 font-semibold text-gray-700">
-                                    Subject <span class="text-red-500">*</span>
-                                </label>
-                                <select
-                                    id="subject"
-                                    name="subject"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-600 @error('subject') border-red-500 @enderror"
-                                    required
-                                >
-                                    <option value="">Select a subject</option>
-                                    <option value="General Inquiry" {{ old('subject') == 'General Inquiry' ? 'selected' : '' }}>General Inquiry</option>
-                                    <option value="Product Question" {{ old('subject') == 'Product Question' ? 'selected' : '' }}>Product Question</option>
-                                    <option value="Custom Furniture" {{ old('subject') == 'Custom Furniture' ? 'selected' : '' }}>Custom Furniture</option>
-                                    <option value="Interior Design" {{ old('subject') == 'Interior Design' ? 'selected' : '' }}>Interior Design</option>
-                                    <option value="Order Support" {{ old('subject') == 'Order Support' ? 'selected' : '' }}>Order Support</option>
-                                    <option value="Technical Issue" {{ old('subject') == 'Technical Issue' ? 'selected' : '' }}>Technical Issue</option>
-                                    <option value="Other" {{ old('subject') == 'Other' ? 'selected' : '' }}>Other</option>
-                                </select>
-                                @error('subject')
-                                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="message" class="block mb-2 font-semibold text-gray-700">
-                                Message <span class="text-red-500">*</span>
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="6"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-600 @error('message') border-red-500 @enderror"
-                                placeholder="Type your message here..."
-                                required
-                            >{{ old('message') }}</textarea>
-                            @error('message')
-                                <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                            @enderror
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    name="newsletter"
-                                    value="1"
-                                    {{ old('newsletter') ? 'checked' : '' }}
-                                    class="w-4 h-4 text-yellow-600 border-gray-300 rounded focus:ring-yellow-500"
-                                >
-                                <span class="ml-2 text-gray-700">Subscribe to our newsletter for updates and offers</span>
-                            </label>
-                        </div>
-
-                        <button
-                            type="submit"
-                            class="w-full px-6 py-3 font-semibold text-white transition transform bg-yellow-600 rounded-lg hover:bg-yellow-700 hover:scale-105"
-                        >
-                            <i class="mr-2 fas fa-paper-plane"></i>Send Message
-                        </button>
-                    </form>
-                </div>
+            <div class="lg:w-1/2 bg-gray-200 relative min-h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.80385597899!2d79.82118589178494!3d6.921922576115982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1625567891234!5m2!1sen!2slk" width="100%" height="100%" style="border:0; position: absolute; inset: 0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Map Section -->
-<section class="py-16 bg-gray-100">
-    <div class="container px-4 mx-auto">
-        <h2 class="mb-8 text-3xl font-bold text-center">Visit Our Store</h2>
-        <div class="overflow-hidden rounded-lg shadow-lg">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467122768!2d79.8612463!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2s!4v1234567890"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="w-full"
-            ></iframe>
-        </div>
-    </div>
-</section>
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
+    }
+    /* Stop on hover so user can click */
+    .group:hover .animate-marquee {
+        animation-play-state: paused;
+    }
 
-<!-- FAQ Section -->
-<section class="py-16 bg-white">
-    <div class="container px-4 mx-auto">
-        <div class="mb-12 text-center">
-            <h2 class="mb-4 text-3xl font-bold">Frequently Asked Questions</h2>
-            <p class="text-gray-600">Find quick answers to common questions</p>
-        </div>
+    @keyframes fade-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
 
-        <div class="max-w-3xl mx-auto space-y-4">
-            <div class="border border-gray-200 rounded-lg">
-                <button class="flex items-center justify-between w-full px-6 py-4 font-semibold text-left hover:bg-gray-50">
-                    <span>What are your delivery times?</span>
-                    <i class="text-gray-400 fas fa-chevron-down"></i>
-                </button>
-                <div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
-                    <p class="text-gray-600">Standard delivery takes 5-7 business days within Colombo and 7-10 business days for other areas. Express delivery is available for an additional fee.</p>
-                </div>
-            </div>
+    @keyframes fade-in-down { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in-down { animation: fade-in-down 0.8s ease-out forwards; }
 
-            <div class="border border-gray-200 rounded-lg">
-                <button class="flex items-center justify-between w-full px-6 py-4 font-semibold text-left hover:bg-gray-50">
-                    <span>Do you offer custom furniture design?</span>
-                    <i class="text-gray-400 fas fa-chevron-down"></i>
-                </button>
-            </div>
+    .delay-100 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+</style>
 
-            <div class="border border-gray-200 rounded-lg">
-                <button class="flex items-center justify-between w-full px-6 py-4 font-semibold text-left hover:bg-gray-50">
-                    <span>What is your return policy?</span>
-                    <i class="text-gray-400 fas fa-chevron-down"></i>
-                </button>
-            </div>
-
-            <div class="border border-gray-200 rounded-lg">
-                <button class="flex items-center justify-between w-full px-6 py-4 font-semibold text-left hover:bg-gray-50">
-                    <span>Do you provide installation services?</span>
-                    <i class="text-gray-400 fas fa-chevron-down"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
 @endsection

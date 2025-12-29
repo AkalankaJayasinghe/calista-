@@ -2,77 +2,62 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Auth;
+use App\Models\User; // User Model එක import කරන්න අමතක කරන්න එපා
+use Illuminate\Support\Facades\Hash; // Hash එකත් import කරන්න
 class AuthController extends Controller
 {
-    /**
-     * Register a new user and return a token
-     */
+    // 1. Register Form එක පෙන්වීම
+    public function showRegisterForm()
+    {
+        return view('auth.register');
+    }
+
+    // 2. අලුත් User කෙනෙක් හැදීම
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:6|confirmed',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed', // confirmed කියන්නේ password_confirmation field එකත් එක්ක check කරනවා
         ]);
-
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
-
-        $data = $validator->validated();
 
         $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => 'customer', // Default role එක customer විදියට දාමු
         ]);
 
-        $token = $user->createToken('api-token')->plainTextToken;
+        Auth::login($user); // හැදුණු ගමන් Auto Login වෙනවා
 
-        return response()->json(["user" => $user, 'token' => $token], 201);
+        return redirect()->route('home')->with('success', 'Account created successfully!');
     }
 
-    /**
-     * Login user and return token
-     */
+    // Login Form එක පෙන්වීම
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
+    // Login Data Check කිරීම
     public function login(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required|string',
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
+        if (Auth::attempt($credentials, $request->remember)) {
+            $request->session()->regenerate();
+
+            // Login වුණාම යන්න ඕන තැන (උදා: Home)
+            return redirect()->intended(route('home'));
         }
 
-        $user = User::where('email', $request->email)->first();
-
-        if (! $user || ! Hash::check($request->password, $user->password)) {
-            return response()->json(['message' => 'Invalid credentials'], 401);
-        }
-
-        $token = $user->createToken('api-token')->plainTextToken;
-
-        return response()->json(["user" => $user, 'token' => $token], 200);
-    }
-
-    /**
-     * Logout current user (revoke current token)
-     */
-    public function logout(Request $request)
-    {
-        $user = $request->user();
-
-        if ($user) {
-            $user->currentAccessToken()->delete();
-        }
-
-        return response()->json(['message' => 'Logged out'], 200);
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 }
